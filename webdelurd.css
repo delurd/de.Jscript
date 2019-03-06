@@ -1,0 +1,839 @@
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track { 
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #22b88b; 
+  border-radius: 10px;
+  box-shadow: ;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff3333; 
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+  position: relative;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-5{
+  position: relative;
+  background-attachment: ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+.bgimg-1 {
+  background-image: url("https://s2.gifyu.com/images/20190215164952-0b6a9d442f.gif-2-mp4.com.gif");
+  min-height: 100vh;
+  background-color: white;
+}
+
+.bgimg-2 {
+  background-image: url("https://3.bp.blogspot.com/-H49dYXxei24/XGbMEt5nriI/AAAAAAAAA9w/5TlVNJMhwEstTD8C49JKZmNR0cYfG1mNQCLcBGAs/s1600/gradArtboard.jpg");
+  min-height: 300px;
+}
+
+
+.bgimg-4 {
+  background-image: url("https://3.bp.blogspot.com/-kec_vuq8bBk/XGbSiya-c7I/AAAAAAAAA-o/tM-nTQzX2QUHvM2MhzWYTBTGBYJVWKuxgCLcBGAs/s1600/contactwave.jpg");
+  min-height: 100vh;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-5 {
+	background-image: url("https://1.bp.blogspot.com/-cm2jw4ozHAo/XGbMFa1tVII/AAAAAAAAA94/UUbPkkJzJIU2K7oOaarFNINCPKMaKf33ACLcBGAs/s1600/gradPortofolio1.jpg");
+	min-height: 100vh
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  float: left;
+  color: #000;
+}
+
+.caption p:hover{
+	background-color: #ddd;
+  color: black;
+  }
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+ h5 { letter-spacing: 2px; font: "Lato", sans-serif;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+.bgimg-1, .bgimg-2 {
+    background-attachment: scroll;
+  }
+}
+
+
+/* TOPNAV */
+#topnav {
+  overflow: hidden;
+  z-index: 1;
+  position: fixed;
+  width: 98%;
+  background-color: transparent;
+  top: 10px;
+  height: 40px;
+}
+
+#topnav a {
+  float: right;
+  display: block;
+  color: #22b88b;
+  text-align: center;
+  background-color: white;
+  padding: 5px 18px;
+  margin-left: 7px;
+  text-decoration: none;
+  font: 15px "Lato", sans-serif;
+  letter-spacing: 2px;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+#topnav img { float: left; margin: 1px 20px; cursor: pointer;}
+
+#topnav a:hover {
+  color: #ff3333;
+  box-shadow: 0px 7px 9px 0 rgba(0,0,0,0.1);
+}
+
+
+/* When the screen is less than 600 pixels wide, show icon*/
+@media screen and (max-width: 600px) {
+	#topnav { display: none;}
+
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* PORTOFOLIO */
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  overflow: auto; /* Enable scroll if needed */
+  height: 78vh;
+}
+.rows {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 12vw;
+  overflow: auto; /* Enable scroll if needed */
+
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+	height: 100%;
+  }
+}
+
+
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column, .columns {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Create 2 equal columns that floats next to each other */
+.columns {
+  float: left;
+  width: 33%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+	
+  }
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content, .contentv {
+  background-color: white;
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.content {  height: 270px;}
+.contentv { transition: 0.3s;}
+
+.animation p {transition: 0.3s; font-size: 14px; color: grey; border-radius: 5px;}
+.animation:hover p {
+	box-shadow: 0 7px 0px 0 rgba(34,184,139,1);
+}
+.video .tooltip, .tooltipr {transition: 0.3s; border-radius: 5px;}
+.video:hover .tooltip { box-shadow: 0 5px 0px 0 rgba(34,184,139,1);}
+.video:hover .tooltipr { box-shadow: 0 5px 0px 0 rgba(34,184,139,1);}
+
+.conten {
+  background-color: rgba(255, 255,255, 1);
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+}
+
+@media only screen and (max-width: 900px){
+  .conten {
+    height: 25vw;
+  }
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 2px 16px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  margin: 2px 0px;  
+}
+
+.btn:hover {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+
+.btn.active {
+  background-color: #22b88b;
+  color: white;
+  box-shadow: 0 0 3px  #22b88b;
+}
+
+/* MODAL */
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  padding: 2vw 0; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0px 3vw;
+}
+
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  color: #ccc;
+  padding: 0px 5vw;
+  text-align: left;
+
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.6s;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff3333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width:100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.overlayi {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0,0, 0.4); /* Black see-through */
+  color: #f1f1f1; 
+  width:100%;
+  transition: .5s ease;
+  opacity: 1;
+  color: white;
+  font-size: 3vw;
+  padding-top: 40%;
+  text-align: center;
+  height: 100%
+}
+
+.content:hover .overlay {
+  opacity: 1;
+}
+
+.conten:hover .overlayi {
+  opacity: 0;
+  display: none;
+}
+
+.conten:hover #myImg {
+  opacity: 1;
+}
+
+.conten:hover .image {
+  transform: scale(1.2);
+}
+
+/* The modals (background) */
+.modals {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 11 ;/* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow:; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+@media only screen and (max-width: 600px){
+  .modals {
+	overflow: auto; /* Enable scroll if needed */
+  }
+}
+
+/* Modal Content */
+.modals-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: none;
+  min-height: 100%;
+}
+
+/* Add Animation - opacity in the Modal */
+.modals-content { 
+  animation-name: opacity;
+  animation-duration: 1s;
+ }
+@keyframes opacity {
+  from { opacity:0 } 
+  to { opacity :1 }
+}
+
+
+/* The Close Button */
+.clos {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: 0.5s;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 99;
+}
+
+.clos:hover,
+.clos:focus {
+  color: #ff3333;
+  text-decoration: none;
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+
+
+/* Button top */
+#Btntop {
+/*  display: none;  Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  top: 20px; /* Place the button at the bottom of the page */
+  background:transparent;
+  right: 2vw; /* Place the button 30px from the right */
+  z-index: 13; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  font-size: 18px; /* Increase font size */
+  width: 50px;
+}
+
+#Btntop:hover {
+  box-shadow:/* Add a dark-grey background on hover */
+}
+
+.image {
+  display: block;
+  width: auto;
+  height: auto;
+  transition: 0.8s;
+}
+.image:hover{
+transform: scale(1.2);
+}
+
+/* HIDE TOP NAVBAR */
+#icon-bar {
+  width: 80%;
+  background-color: transparent;
+  overflow: auto;
+  float: none;
+  position: fixed;
+  left: 50%;
+  bottom:5px;
+  transition: bottom 0.2s;
+  z-index: 1; /* Make sure it does not overlap */
+  transform: translate(-50%, 10%);
+  display: block;
+  padding-left: 49px;
+}
+
+
+#icon-bar a {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 12px;
+  padding-top: 30px;
+  
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #22b88b;
+  font-size: 17px;
+  display: block;
+  
+  
+}
+
+#icon-bar a:hover {
+   color: #ff3333;
+   padding: 10px;
+   font-size: 20px;
+}
+
+#icon-bar span { opacity: 0; font-size: 15px; padding-left: 0px; transition: 0.2s; color:#ff3333;}
+
+
+#icon-bar a:hover span {
+   opacity: 1;
+   padding-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+ #icon-bar span { display: none;}
+ #icon-bar {  padding-left: 0px;}
+ }
+
+#active {
+  background-color: transparent;
+  color: #ff3333;
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+
+/* ZIG ZAG Colum */
+.container {
+  padding: ;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* 1/2 column */
+.column-50 {
+  float: left;
+  width: 50%;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 900px) {
+  .column-66,
+  .column-33, .column-50 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* LOADER Center the loader */
+#loaders {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -22px 0 0 -22px;
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 3px solid #ff3333;
+  border-right: 12px solid #22b88b;  
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1.2s linear infinite;
+  animation: spin 1.2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+display: none;
+  text-align: center;
+}
+video {
+	width: 100%;
+}
+iframe { border:none;
+}
+
+/* UNDERLINE */
+.bar1{
+  width: 0px;
+  height: 5px;
+  background-color: #22b88b;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+#myBtnport:hover .bar1 {width: 100%;   
+}
+
+/* UNDERLINE */
+.hover-left{
+	display:inline-block;
+	vertical-align:middle;
+	-webkit-transform:translateZ(0);
+	transform:translateZ(0);
+	box-shadow:0 0 1px rgba(0,0,0,0);
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+	-moz-osx-font-smoothing:grayscale;
+	position:relative;
+	overflow:hidden
+}
+.hover-left:before{
+	content:"";
+	position:absolute;
+	z-index:-1;
+	left:0;
+	right:100%;
+	bottom:0;
+	background: #22b88b;
+	height: 3px;
+	-webkit-transition-property:right;
+	transition-property:right;
+	-webkit-transition-duration:.3s;
+	transition-duration:.3s;
+	-webkit-transition-timing-function:cubic-bezier(.92,0,.8,1);
+	transition-timing-function:cubic-bezier(.92,0,.8,1)
+}
+.hover-left:hover:before,.hover-left:focus:before,.hover-left:active:before{right:0}
+
+/* TOOL TIPS */
+.tooltip, .tooltipr {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+  
+}
+
+.tooltip span { font-size: 12px;}
+.tooltipr span { font-size: 12px;}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  color: black;
+  text-align: left;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  left: 120%;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+  
+ 
+
+  
+}
+@media only screen and (max-width: 800px){
+.tooltiptext, .tooltipr {
+display: none;
+  }
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+   bottom: 1%;
+    right: 100%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+	transform:rotate(90deg);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltipr .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  color: black;
+  text-align: left;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  right: 120%;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s;  
+}
+
+.tooltipr .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 1%;
+  left: 103%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+	transform:rotate(-90deg);
+}
+
+.tooltipr:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+/* ICON SOCIAL MEDIA */ 
+.fi {
+  padding: 20px;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px 8px;
+  border-radius: 50%;
+}
+
+.fi:hover {
+    opacity: 0.9;
+	box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+	transition: 0.3s;
+}
+.fa-envelope-open { background: #dd4b39; color: white; }
+.fa-youtube { background: #bb0000;color: white;}
+.fa-instagram { background: #125688; color: white;}
+.fa-whatsapp { background: green; color: white; }
